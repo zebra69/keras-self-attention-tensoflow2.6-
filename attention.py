@@ -45,7 +45,7 @@ class MyAttention(tf.keras.layers.Layer):
             a = tf.squeeze(e,[1])
             a = a*x
         else:
-            a = tf.matmul(a1,tf.keras.backend.expand_dims(x))
+            a = tf.matmul(a,tf.keras.backend.expand_dims(x))
             a = tf.squeeze(a,[2])
         
         if self.use_scale:
